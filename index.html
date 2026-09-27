@@ -98,12 +98,23 @@
                 <span class="challenge-action">Jugar <i class="fas fa-arrow-right"></i></span>
             </a>
             <section class="utilities-card" id="utilidades" aria-labelledby="utilitiesTitle">
+                <button type="button" class="utilities-toggle" id="utilitiesToggle" aria-expanded="false" aria-controls="utilitiesMenu">
+                    <span class="utilities-icon"><i class="fas fa-toolbox"></i></span>
+                    <span class="utilities-toggle-copy"><span class="section-kicker">Herramientas</span><strong id="utilitiesTitle">Utilidades</strong><small>Calculadoras y recursos de apoyo</small></span>
+                    <span class="utilities-chevron"><i class="fas fa-chevron-down"></i></span>
+                </button>
+                <div class="utilities-menu" id="utilitiesMenu" hidden>
+                    <button type="button" class="utility-item" id="dilutionUtilityToggle" aria-expanded="false" aria-controls="dilutionCalculator">
+                        <span class="utility-item-icon"><i class="fas fa-calculator"></i></span>
+                        <span><strong>Calculadora de diluciones</strong><small>General y seriada, con resultados paso a paso.</small></span>
+                        <i class="fas fa-chevron-right"></i>
+                    </button>
+                <div class="dilution-calculator" id="dilutionCalculator" hidden>
                 <div class="utilities-heading">
-                    <span class="utilities-icon"><i class="fas fa-calculator"></i></span>
                     <div>
-                        <p class="section-kicker">Utilidades</p>
-                        <h3 id="utilitiesTitle">Calculadora de diluciones</h3>
-                        <p>Prepará diluciones generales o seriadas sin conversiones manuales.</p>
+                        <p class="section-kicker">Calculadora</p>
+                        <h3>Prepará una dilución</h3>
+                        <p>Usá la misma unidad de concentración en C₁ y C₂.</p>
                     </div>
                 </div>
                 <div class="dilution-tabs" role="tablist" aria-label="Tipo de cálculo">
@@ -134,6 +145,8 @@
                     <p class="calculator-hint">Cada tubo se prepara con una fracción de la dilución anterior y diluyente hasta completar el volumen indicado.</p>
                     <button type="button" class="calculate-button" id="calculateSerial"><i class="fas fa-table"></i> Generar tabla</button>
                     <div class="serial-result" id="serialResult" aria-live="polite" hidden></div>
+                </div>
+                </div>
                 </div>
             </section>
             <div id="studentModePanel" class="student-mode-panel" hidden>

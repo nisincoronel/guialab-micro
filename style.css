@@ -1288,7 +1288,26 @@ footer { border-color:#dbe7d9; background:rgba(255,255,255,.75); }
 .footer-tag { color:var(--primary); }
 
 /* ---------- Utilidades: calculadoras de diluciones ---------- */
-.utilities-card { position:relative; z-index:1; margin-top:12px; padding:18px; border:1px solid #d7e6d4; border-radius:17px; background:linear-gradient(145deg,#fff,#f5faf2); box-shadow:0 8px 20px rgba(7,57,32,.07); }
+.utilities-card { position:relative; z-index:1; margin-top:12px; overflow:hidden; border:1px solid #d7e6d4; border-radius:17px; background:linear-gradient(145deg,#fff,#f5faf2); box-shadow:0 8px 20px rgba(7,57,32,.07); }
+.utilities-toggle { display:flex; align-items:center; width:100%; gap:12px; padding:14px; border:0; color:inherit; background:transparent; text-align:left; font:inherit; cursor:pointer; }
+.utilities-toggle:hover { background:#f5faf1; }
+.utilities-toggle:focus-visible,.utility-item:focus-visible { outline:3px solid rgba(22,131,63,.22); outline-offset:-3px; }
+.utilities-toggle-copy { display:flex; flex:1; min-width:0; flex-direction:column; gap:2px; }
+.utilities-toggle-copy .section-kicker { margin:0; }
+.utilities-toggle-copy strong { color:var(--dark); font-size:.86rem; }
+.utilities-toggle-copy small { color:var(--text); font-size:.65rem; }
+.utilities-chevron { color:#618270; font-size:.78rem; transition:transform .2s ease; }
+.utilities-toggle[aria-expanded="true"] .utilities-chevron { transform:rotate(180deg); }
+.utilities-menu { padding:0 12px 12px; border-top:1px solid #e2ede0; animation:fadeIn .18s ease both; }
+.utility-item { display:flex; align-items:center; width:100%; gap:10px; margin-top:11px; padding:11px; border:1px solid #d8e8d5; border-radius:13px; color:inherit; background:#fff; text-align:left; font:inherit; cursor:pointer; transition:.18s ease; }
+.utility-item:hover { border-color:#a7ca9d; box-shadow:0 7px 15px rgba(7,81,47,.08); transform:translateY(-1px); }
+.utility-item > span:nth-child(2) { display:flex; flex:1; min-width:0; flex-direction:column; gap:3px; }
+.utility-item strong { color:#173e2a; font-size:.74rem; }
+.utility-item small { color:#678072; font-size:.62rem; line-height:1.35; }
+.utility-item > i { color:#6a9873; font-size:.7rem; transition:transform .18s ease; }
+.utility-item[aria-expanded="true"] > i { transform:rotate(90deg); }
+.utility-item-icon { display:grid; place-items:center; flex:0 0 34px; width:34px; height:34px; border-radius:10px; color:#0c663c; background:#e8f5dd; }
+.dilution-calculator { margin-top:10px; padding:14px; border:1px solid #d8e8d5; border-radius:14px; background:linear-gradient(145deg,#fbfef9,#f1f8ec); animation:fadeIn .2s ease both; }
 .utilities-heading { display:flex; align-items:flex-start; gap:12px; }
 .utilities-heading h3 { margin:1px 0 4px; color:var(--dark); font-size:1rem; }
 .utilities-heading p { margin:0; color:var(--text); font-size:.76rem; line-height:1.45; }
@@ -1358,7 +1377,9 @@ footer { border-color:#dbe7d9; background:rgba(255,255,255,.75); }
     .guide-copy > span { font-size:.61rem; }
     .student-mode-grid { grid-template-columns:1fr; }
     .student-panel-actions { flex-direction:column; }
-    .utilities-card { padding:14px; }
+    .utilities-toggle { padding:13px; }
+    .utilities-menu { padding:0 10px 10px; }
+    .dilution-calculator { padding:12px; }
     .dilution-grid,.serial-grid { grid-template-columns:1fr; }
     .calculation-choice { flex-direction:column; gap:8px; }
     .calculate-button { width:100%; }
