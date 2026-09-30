@@ -1,27 +1,25 @@
-# GuíaLab Micro
+# GuíaLab Micro — versión limpia
 
-Primera versión de GuíaLab Micro construida sobre la base visual y estructural de GuíaLab.
+Esta versión usa la GuíaLab original como base visual/estructural, pero NO incluye el juego clínico anterior.
 
-## Incluye
-- Buscador general.
-- Filtro por categorías.
-- Fichas de microorganismos.
-- Medios de cultivo.
-- Tinciones.
-- Pruebas bioquímicas.
-- Muestras y cultivos.
-- Métodos microbiológicos.
-- Microbiología de alimentos y agua.
-- Control de calidad.
-- Diseño responsive y PWA heredado de GuíaLab.
+Incluye:
+- buscador microbiológico;
+- filtros por categoría;
+- fichas de microorganismos;
+- medios de cultivo;
+- tinciones;
+- pruebas bioquímicas;
+- muestras;
+- métodos;
+- microbiología de alimentos/agua;
+- control de calidad;
+- Desafío Micro independiente con preguntas de microbiología.
 
-## Importante
-El contenido incluido es una base inicial educativa. Los procedimientos, tiempos, medios y criterios de interpretación deben contrastarse con los procedimientos normalizados del laboratorio, normas vigentes y métodos validados antes de utilizarse operativamente.
+El contenido es educativo y debe contrastarse con procedimientos normalizados, métodos validados y normativa aplicable antes de utilizarse operativamente.
 
-## Próximas ampliaciones sugeridas
-1. Tabla de identificación bacteriana interactiva.
-2. Buscador por Gram / morfología / oxidasa / catalasa.
-3. Biblioteca visual de medios y colonias.
-4. Antibiograma y conceptos de control de calidad.
-5. Sección específica de microbiología de agua.
-6. Sección específica de bromatología.
+Próximas ampliaciones:
+- identificación bacteriana paso a paso;
+- filtros por Gram, morfología, oxidasa, catalasa, etc.;
+- biblioteca visual de colonias;
+- módulos de agua y bromatología;
+- juego con niveles, vidas y casos prácticos.

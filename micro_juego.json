@@ -1,0 +1,112 @@
+[
+  {
+    "q": "Tenés un bacilo Gram negativo que fermenta lactosa. ¿Qué medio es especialmente útil para orientarlo?",
+    "options": [
+      "Agar Sabouraud",
+      "Agar MacConkey",
+      "Mueller-Hinton",
+      "Agar sangre"
+    ],
+    "answer": 1,
+    "explanation": "MacConkey es selectivo para muchos Gram negativos y diferencia fermentadores de lactosa."
+  },
+  {
+    "q": "¿Qué prueba produce burbujas al agregar peróxido de hidrógeno?",
+    "options": [
+      "Oxidasa",
+      "Ureasa",
+      "Catalasa",
+      "Indol"
+    ],
+    "answer": 2,
+    "explanation": "La catalasa descompone el peróxido de hidrógeno y libera oxígeno visible como burbujas."
+  },
+  {
+    "q": "¿Qué tinción diferencia bacterias Gram positivas y Gram negativas?",
+    "options": [
+      "Gram",
+      "Ziehl-Neelsen",
+      "Lactofenol",
+      "Giemsa"
+    ],
+    "answer": 0,
+    "explanation": "La tinción de Gram permite una clasificación inicial según la reacción de la pared bacteriana."
+  },
+  {
+    "q": "¿Qué medio se utiliza principalmente para pruebas de sensibilidad por difusión con discos?",
+    "options": [
+      "CLED",
+      "Mueller-Hinton",
+      "Sabouraud",
+      "XLD"
+    ],
+    "answer": 1,
+    "explanation": "Mueller-Hinton es el medio estandarizado utilizado habitualmente para difusión de discos."
+  },
+  {
+    "q": "Una colonia presenta hemólisis alrededor de su crecimiento en agar sangre. ¿Qué observás?",
+    "options": [
+      "Una reacción colonial",
+      "Una tinción",
+      "Una prueba de oxidasa",
+      "Un antibiograma"
+    ],
+    "answer": 0,
+    "explanation": "La hemólisis es una característica colonial observable en agar sangre."
+  },
+  {
+    "q": "¿Qué prueba evalúa la utilización de citrato como fuente de carbono?",
+    "options": [
+      "Citrato de Simmons",
+      "Catalasa",
+      "Coagulasa",
+      "Indol"
+    ],
+    "answer": 0,
+    "explanation": "El citrato de Simmons permite evaluar la utilización de citrato bajo las condiciones del medio."
+  },
+  {
+    "q": "¿Qué medio se asocia especialmente con el cultivo de hongos y levaduras?",
+    "options": [
+      "Sabouraud",
+      "CLED",
+      "Mueller-Hinton",
+      "MacConkey"
+    ],
+    "answer": 0,
+    "explanation": "Sabouraud se emplea ampliamente para el aislamiento y desarrollo de hongos y levaduras."
+  },
+  {
+    "q": "Para un urocultivo, ¿qué variable preanalítica es crítica?",
+    "options": [
+      "Color del agar",
+      "Toma y transporte de la muestra",
+      "Marca del microscopio",
+      "Color del tapón"
+    ],
+    "answer": 1,
+    "explanation": "Una muestra urinaria correctamente recolectada y transportada es fundamental para interpretar el cultivo."
+  },
+  {
+    "q": "¿Qué prueba detecta citocromo c oxidasa?",
+    "options": [
+      "Ureasa",
+      "Indol",
+      "Oxidasa",
+      "Coagulasa"
+    ],
+    "answer": 2,
+    "explanation": "La prueba de oxidasa detecta actividad de la citocromo c oxidasa."
+  },
+  {
+    "q": "En un hemocultivo positivo, ¿qué procedimiento puede orientar inicialmente la identificación?",
+    "options": [
+      "Gram",
+      "Citrato solamente",
+      "Manitol solamente",
+      "Filtración por membrana"
+    ],
+    "answer": 0,
+    "explanation": "La tinción de Gram del material positivo aporta orientación morfológica inicial."
+  }
+]
