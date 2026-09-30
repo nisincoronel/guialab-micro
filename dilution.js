@@ -6,12 +6,6 @@
     const valueOf = id => Number.parseFloat(document.getElementById(id)?.value);
     const validPositive = value => Number.isFinite(value) && value > 0;
 
-    const setExpanded = (button, panel, expanded) => {
-        if (!button || !panel) return;
-        button.setAttribute('aria-expanded', String(expanded));
-        panel.hidden = !expanded;
-    };
-
     const showMessage = (element, message, isError = false) => {
         element.hidden = false;
         element.className = `calculation-result${isError ? ' is-error' : ''}`;
@@ -88,25 +82,6 @@
             <p class="serial-summary">Por cada tubo: transferí <b>${formatNumber(transfer)} ${unit}</b> de la dilución anterior y agregá <b>${formatNumber(diluent)} ${unit}</b> de diluyente para completar ${formatNumber(volume)} ${unit}.</p>
             <div class="table-scroll"><table><thead><tr><th>Tubo</th><th>Dilución acumulada</th><th>Concentración</th><th>Transferir</th><th>Diluyente</th></tr></thead><tbody>${rows}</tbody></table></div>`;
     };
-
-    const utilitiesToggle = document.getElementById('utilitiesToggle');
-    const utilitiesMenu = document.getElementById('utilitiesMenu');
-    const dilutionUtilityToggle = document.getElementById('dilutionUtilityToggle');
-    const dilutionCalculator = document.getElementById('dilutionCalculator');
-
-    utilitiesToggle?.addEventListener('click', () => {
-        const expanded = utilitiesToggle.getAttribute('aria-expanded') === 'true';
-        setExpanded(utilitiesToggle, utilitiesMenu, !expanded);
-        if (expanded) setExpanded(dilutionUtilityToggle, dilutionCalculator, false);
-    });
-
-    dilutionUtilityToggle?.addEventListener('click', () => {
-        const expanded = dilutionUtilityToggle.getAttribute('aria-expanded') === 'true';
-        setExpanded(dilutionUtilityToggle, dilutionCalculator, !expanded);
-        if (!expanded) {
-            setTimeout(() => dilutionCalculator.querySelector('input')?.focus({ preventScroll: true }), 160);
-        }
-    });
 
     document.querySelectorAll('[data-dilution-tab]').forEach(button => button.addEventListener('click', () => {
         const activePanel = button.dataset.dilutionTab;

@@ -4,7 +4,7 @@ La guía y el desafío comparten el archivo `determinaciones.json`.
 
 ## Utilidades
 
-La calculadora de diluciones está dentro del menú desplegable **Utilidades**, pensado para sumar más herramientas sin recargar la pantalla principal. Incluye diluciones generales (`C₁ × V₁ = C₂ × V₂`) y seriadas. Los volúmenes se pueden expresar en µL, mL o L. Para concentraciones, C₁ y C₂ deben ingresarse en la misma unidad.
+La pantalla principal incorpora una calculadora de diluciones generales (`C₁ × V₁ = C₂ × V₂`) y una tabla para diluciones seriadas. Los volúmenes se pueden expresar en µL, mL o L. Para concentraciones, C₁ y C₂ deben ingresarse en la misma unidad.
 
 ## Contador de visitas
 

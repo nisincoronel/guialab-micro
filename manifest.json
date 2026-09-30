@@ -1,7 +1,7 @@
 {
-  "name": "GuíaLab Pre-Analítica",
-  "short_name": "GuíaLab",
-  "description": "Guía de formación y consulta pre-analítica para estudiantes de laboratorio.",
+  "name": "GuíaLab Micro",
+  "short_name": "GuíaLab Micro",
+  "description": "Guía rápida de microbiología aplicada al laboratorio.",
   "start_url": "./index.html",
   "display": "standalone",
   "background_color": "#f5f8f2",
