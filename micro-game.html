@@ -1,0 +1,51 @@
+<!doctype html>
+<html lang="es">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <meta name="theme-color" content="#07512f">
+  <title>Desafío Micro | GuíaLab</title>
+  <link rel="icon" href="icon-192.png">
+  <link rel="preconnect" href="https://cdnjs.cloudflare.com">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="micro-game.css">
+</head>
+<body class="micro-game-body">
+  <main class="micro-game-shell">
+    <a class="micro-game-back" href="index.html"><i class="fas fa-arrow-left"></i> Volver a GuíaLab Micro</a>
+    <header class="micro-game-brand">
+      <img src="logo-guialab.png" alt="GuíaLab">
+      <span><i class="fas fa-bacterium"></i> MICROBIOLOGÍA</span>
+    </header>
+    <section class="micro-game-panel" id="gamePanel" aria-live="polite">
+      <div class="game-start" id="gameStart">
+        <div class="game-start-icon"><i class="fas fa-brain"></i></div>
+        <span class="game-eyebrow">Desafío Micro</span>
+        <h1>Aprendé jugando</h1>
+        <p>Respondé preguntas sobre las fichas microbiológicas. Cada acierto suma puntos y mejora tu racha.</p>
+        <div class="game-rules"><span><i class="fas fa-bolt"></i> Puntos por acierto</span><span><i class="fas fa-fire"></i> Racha acumulable</span><span><i class="fas fa-flask"></i> Contenido Micro</span></div>
+        <button type="button" class="game-primary" id="startGame"><i class="fas fa-play"></i> Empezar desafío</button>
+      </div>
+      <div class="game-play" id="gamePlay" hidden>
+        <div class="game-status"><span id="gameCount">Pregunta 1</span><span class="game-score"><i class="fas fa-star"></i> <b id="gameScore">0</b> pts</span><span class="game-streak"><i class="fas fa-fire"></i> <b id="gameStreak">0</b></span></div>
+        <div class="game-progress"><span id="gameProgress"></span></div>
+        <p class="game-category" id="gameCategory">Microbiología</p>
+        <h1 id="gameQuestion"></h1>
+        <div class="micro-game-options" id="gameOptions"></div>
+        <div class="game-feedback" id="gameFeedback" hidden></div>
+        <button type="button" class="game-primary game-next" id="nextGame" hidden>Siguiente <i class="fas fa-arrow-right"></i></button>
+      </div>
+      <div class="game-results" id="gameResults" hidden>
+        <div class="game-result-icon"><i class="fas fa-trophy"></i></div>
+        <span class="game-eyebrow">Resultado</span>
+        <h1 id="resultTitle">¡Buen trabajo!</h1>
+        <p id="resultMessage"></p>
+        <div class="result-stats"><div><strong id="resultScore">0</strong><span>Puntos</span></div><div><strong id="resultCorrect">0/0</strong><span>Aciertos</span></div><div><strong id="resultBestStreak">0</strong><span>Mejor racha</span></div></div>
+        <div class="result-actions"><button type="button" class="game-primary" id="restartGame"><i class="fas fa-rotate-right"></i> Jugar otra vez</button><a href="index.html" class="game-secondary">Volver a las fichas</a></div>
+      </div>
+    </section>
+  </main>
+  <script src="micro-game.js"></script>
+</body>
+</html>

@@ -1,18 +1,20 @@
-const CACHE_NAME = 'guialab-cache-v18';
+const CACHE_NAME = 'guialab-micro-v2';
 
 const APP_ASSETS = [
   './',
   './index.html',
-  './game.html',
+  './micro-game.html',
   './style.css',
-  './game.css',
-  './script.js',
-  './dilution.js',
-  './game.js',
-  './determinaciones.json',
+  './micro-game.css',
+  './micro.js',
+  './micro-game.js',
+  './microbiologia.json',
+  './micro_juego.json',
   './manifest.json',
   './logo-guialab.png',
-  'https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css'
+  './icon-192.png',
+  './icon-512.png',
+  'https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css'
 ];
 
 self.addEventListener('install', event => {
@@ -28,8 +30,6 @@ self.addEventListener('activate', event => {
   );
 });
 
-// Con conexión, prioriza siempre la versión publicada más reciente.
-// Sin conexión, devuelve la última versión disponible en el dispositivo.
 self.addEventListener('fetch', event => {
   if (event.request.method !== 'GET') return;
 

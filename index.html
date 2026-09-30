@@ -3,6 +3,7 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width,initial-scale=1">
+<meta name="theme-color" content="#07512f">
 <title>GuíaLab Micro | Microbiología</title>
 <link rel="manifest" href="manifest.json">
 <link rel="stylesheet" href="style.css">
@@ -10,6 +11,12 @@
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+<script>
+(() => {
+  const saved = localStorage.getItem('guialabMicroTheme');
+  document.documentElement.dataset.theme = saved ? saved : (window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light');
+})();
+</script>
 <style>
 :root{--micro:#087f5b;--micro-dark:#07512f;--micro-soft:#e9f8f1;--micro-border:#cfe9dd}
 body{background:radial-gradient(circle at 8% 0%,rgba(8,127,91,.10),transparent 28rem),radial-gradient(circle at 96% 20%,rgba(22,119,168,.08),transparent 25rem),var(--light-bg)}
@@ -43,7 +50,7 @@ body{background:radial-gradient(circle at 8% 0%,rgba(8,127,91,.10),transparent 2
 <header class="dashboard-header" id="inicio">
   <div class="dashboard-topline">
     <div class="brand-mini brand-full-logo"><img class="brand-logo" src="logo-guialab.png" alt="GuíaLab"></div>
-    <span class="micro-badge"><i class="fas fa-bacterium"></i> MICRO</span>
+    <div class="header-actions"><button type="button" class="theme-toggle" id="themeToggle" aria-label="Activar modo oscuro" aria-pressed="false"><i class="fas fa-moon"></i><span>Oscuro</span></button><span class="micro-badge"><i class="fas fa-bacterium"></i> MICRO</span></div>
   </div>
   <div class="dashboard-welcome">
     <div>
@@ -73,8 +80,11 @@ body{background:radial-gradient(circle at 8% 0%,rgba(8,127,91,.10),transparent 2
     <button data-group="Muestras"><i class="fas fa-prescription-bottle"></i> Muestras<small>Orina, sangre, materia fecal</small></button>
     <button data-group="Métodos"><i class="fas fa-filter"></i> Métodos<small>Procesamiento microbiológico</small></button>
     <button data-group="Microbiología de alimentos"><i class="fas fa-utensils"></i> Alimentos y agua<small>Microbiología aplicada</small></button>
-    <button id="openGame"><i class="fas fa-brain"></i> Desafío Micro<small>Probá tus conocimientos</small></button>
   </div>
+  <button type="button" class="dashboard-guide" id="studentModeButton" aria-pressed="false"><span class="guide-icon"><i class="fas fa-graduation-cap"></i></span><span class="guide-copy"><strong>Modo estudiante</strong><span>Repasá muestra, medio, incubación e identificación antes de revelar los datos.</span></span><span class="guide-toggle"><i class="fas fa-toggle-off"></i></span></button>
+  <div id="studentModePanel" class="student-mode-panel" hidden><div class="student-mode-title"><i class="fas fa-book-medical"></i><strong>Modo estudiante activado</strong></div><div class="student-mode-grid"><div><b>1</b><span>Elegí una ficha</span></div><div><b>2</b><span>Respondé mentalmente</span></div><div><b>3</b><span>Revelá cada dato</span></div></div></div>
+  <a class="challenge-card" href="micro-game.html" aria-label="Abrir Desafío Micro"><span class="challenge-orbit challenge-orbit-one"></span><span class="challenge-orbit challenge-orbit-two"></span><span class="challenge-icon"><i class="fas fa-brain"></i></span><span class="challenge-copy"><span class="challenge-kicker"><i class="fas fa-sparkles"></i> Desafío Micro</span><strong>Convertí el repaso en un desafío</strong><small>Preguntas de microbiología, puntaje y racha.</small></span><span class="challenge-action">Jugar <i class="fas fa-arrow-right"></i></span></a>
+  <section class="utilities-card" id="utilidades" aria-labelledby="utilitiesTitle"><button type="button" class="utilities-toggle" id="utilitiesToggle" aria-expanded="false" aria-controls="utilitiesMenu"><span class="utilities-icon"><i class="fas fa-toolbox"></i></span><span class="utilities-toggle-copy"><span class="section-kicker">Herramientas</span><strong id="utilitiesTitle">Utilidades</strong><small>Recursos de apoyo para el laboratorio</small></span><span class="utilities-chevron"><i class="fas fa-chevron-down"></i></span></button><div class="utilities-menu" id="utilitiesMenu" hidden><div class="utility-empty"><i class="fas fa-wand-magic-sparkles"></i><strong>Próximamente</strong><span>Este espacio queda listo para sumar calculadoras, tablas y otras herramientas de microbiología.</span></div></div></section>
   <p class="micro-note"><i class="fas fa-circle-info"></i> Base educativa inicial. Los procedimientos operativos deben ajustarse a métodos validados y normativa aplicable.</p>
 </section>
 
@@ -100,14 +110,6 @@ body{background:radial-gradient(circle at 8% 0%,rgba(8,127,91,.10),transparent 2
 <div id="modal" class="modal-overlay" style="display:none"><div class="modal-content">
 <button class="modal-close" onclick="cerrarModal()" aria-label="Cerrar"><i class="fas fa-times"></i></button>
 <div id="modalData"></div>
-</div></div>
-
-<div id="gameModal" class="modal-overlay" style="display:none"><div class="modal-content">
-<button class="modal-close" onclick="cerrarJuego()" aria-label="Cerrar"><i class="fas fa-times"></i></button>
-<div class="modal-micro-head"><h2 class="modal-title">🧠 Desafío Micro</h2><p class="modal-texto">Poné a prueba tus conocimientos de microbiología.</p></div>
-<div class="game-box">
-<div id="gameProgress"></div><div id="gameQuestion" class="game-question"></div><div id="gameOptions"></div><div id="gameFeedback" class="game-feedback"></div><button id="gameNext" class="game-next" style="display:none">Siguiente</button>
-</div>
 </div></div>
 
 <script src="micro.js"></script>

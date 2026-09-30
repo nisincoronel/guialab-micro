@@ -1,25 +1,18 @@
-# GuíaLab Micro — versión limpia
+# GuíaLab Micro
 
-Esta versión usa la GuíaLab original como base visual/estructural, pero NO incluye el juego clínico anterior.
+Versión de GuíaLab dedicada a microbiología y preparada para publicar en GitHub Pages.
 
 Incluye:
-- buscador microbiológico;
-- filtros por categoría;
-- fichas de microorganismos;
-- medios de cultivo;
-- tinciones;
-- pruebas bioquímicas;
-- muestras;
-- métodos;
-- microbiología de alimentos/agua;
-- control de calidad;
-- Desafío Micro independiente con preguntas de microbiología.
 
-El contenido es educativo y debe contrastarse con procedimientos normalizados, métodos validados y normativa aplicable antes de utilizarse operativamente.
+- buscador y filtros de fichas microbiológicas;
+- modo estudiante con respuestas desplegables;
+- Desafío Micro con puntaje, racha y resultados;
+- tema claro/oscuro con contraste accesible;
+- sección de Utilidades lista para futuras herramientas específicas;
+- funcionamiento instalable/sin conexión mediante caché.
 
-Próximas ampliaciones:
-- identificación bacteriana paso a paso;
-- filtros por Gram, morfología, oxidasa, catalasa, etc.;
-- biblioteca visual de colonias;
-- módulos de agua y bromatología;
-- juego con niveles, vidas y casos prácticos.
+## Publicación
+
+Subí **el contenido** de esta carpeta a la raíz de un repositorio GitHub y activá GitHub Pages desde la rama principal. No hace falta descomprimir dentro de otra carpeta: `index.html` debe quedar en la raíz publicada.
+
+El contenido es educativo; antes de aplicarlo en un procedimiento, contrastalo con métodos validados y la normativa vigente.
